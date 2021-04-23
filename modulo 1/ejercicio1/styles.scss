@@ -1,0 +1,45 @@
+$colors: salmon, khaki, indianred;
+
+@mixin generate-colors($base-color) {
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: calc(33.33vh - 30px);
+    .box {
+        width: 150px;
+        height: 150px;
+
+        &.base-color {
+            background-color: $base-color;
+            color: white;
+        }
+        @for $i from 1 to 5 {
+            $perc: percentage($i);
+
+            &.darken-#{$i} {
+                color: white;
+                background-color: darken($base-color, $perc);
+            }
+
+            &.lighten-#{$i} {
+                background-color: lighten($base-color, $perc);
+            }
+        }
+    }
+}
+
+@function percentage($i) {
+    @return (5%*$i);
+}
+
+body { 
+    margin: 0px; 
+}
+
+@for $i from 1 to 4 {
+    .container-#{$i} {
+        @include generate-colors(nth($colors, $i));
+    }
+}
