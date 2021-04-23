@@ -1,0 +1,57 @@
+@import './variables_tema_claro';
+// @import './variables_tema_oscuro';
+
+body {
+    background-color: $background-color;
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius;
+    width: 150px;
+    height: 150px;
+}
+
+.base {
+    background-color: $base-color;
+}
+
+.important {
+    background-color: $important;
+}
+
+.warning {
+    background-color: $warning;
+}
+
+p.secondary {
+    font-family: $seconrady-font;
+    font-weight: bold;
+    font-style: italic;
+    color: $color;
+}
+
+p.primary {
+    font-family: $principal-font;
+    font-weight: 900;
+    color: $color;
+}
+
+.box-item {
+    box-shadow: $shadow-box;
+    border: 1px solid $base-color;
+    color: $color;
+}
