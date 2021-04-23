@@ -16,22 +16,16 @@ $colors: salmon, khaki, indianred;
             color: white;
         }
         @for $i from 1 to 5 {
-            $perc: percentage($i);
-
             &.darken-#{$i} {
                 color: white;
-                background-color: darken($base-color, $perc);
+                background-color: darken($base-color, $i*5%);
             }
 
             &.lighten-#{$i} {
-                background-color: lighten($base-color, $perc);
+                background-color: lighten($base-color, $i*5%);
             }
         }
     }
-}
-
-@function percentage($i) {
-    @return (5%*$i);
 }
 
 body { 
