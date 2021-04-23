@@ -1,0 +1,58 @@
+$colors: salmon, khaki, indianred, mediumturquoise;
+@mixin generate-colors($base-color) {
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+    .box {
+        width: 150px;
+        height: 150px;
+
+        &.base-color {
+            background-color: $base-color;
+            width: 150px;
+            color: white;
+        }
+        
+        &.darken-1 {
+            color: white;
+            background-color: darken($base-color, 5%);
+        }
+        &.darken-2 {
+            color: white;
+            background-color: darken($base-color, 10%);
+        }
+        &.darken-3 {
+            color: white;
+            background-color: darken($base-color, 15%);
+        }
+        &.darken-4 {
+            color: white;
+            background-color: darken($base-color, 20%);
+        }
+    
+        &.lighten-1 {
+            background-color: lighten($base-color, 5%);
+        }
+        &.lighten-2 {
+            background-color: lighten($base-color, 10%);
+        }
+        &.lighten-3 {
+            background-color: lighten($base-color, 15%);
+        }
+        &.lighten-4 {
+            background-color: lighten($base-color, 20%);
+        }
+    }
+}
+
+.container-1 {
+    @include generate-colors(salmon);
+}
+
+.container-2 {
+    @include generate-colors(khaki);
+}
+
+.container-3 {
+    @include generate-colors(indianred);
+}
