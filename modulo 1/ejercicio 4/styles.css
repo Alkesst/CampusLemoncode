@@ -8,6 +8,8 @@
 .img-container {
     max-width: 524px;
     max-height: 400px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 .title {
@@ -23,12 +25,9 @@
 .footer {
     padding-top: 20px;
     padding-right: 15px;
-    align-self: end;
+    align-self: flex-end;
 }
 
-p {
-
-}
 
 .container {
     background-color: #d7f8ff;
@@ -37,4 +36,29 @@ p {
     width: 524px;
     height: 90vh;
     flex-direction: column;
+    border-radius: 10px;
+}
+
+a {
+    color: indianred;
+}
+
+a:hover {
+    color: indianred;
+}
+
+button {
+    background-color: salmon;
+    padding: 15px;
+    border-radius: 5px;
+    justify-self: center;
+    border: 2px solid indianred;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+button:hover {
+    cursor: pointer;
 }
