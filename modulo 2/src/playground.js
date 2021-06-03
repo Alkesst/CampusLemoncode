@@ -115,3 +115,41 @@ printResults('isBookRead 2', isBookRead(books, 'Introducción al Cálculo'));
 printResults('isBookRead 3', isBookRead(books, 'Análisis y diseño de algoritmos'));
 printResults('isBookRead 4', isBookRead(books, 'Clean Code y etc'));
 
+// Slot machine
+
+const generateRandomBoolean = () => Math.random() <= 0.5;
+
+class SlotMachine { 
+    coinCounter;
+    thatThing;
+
+    constructor() {
+        this.coinCounter = 0;
+        this.thatThing = [];
+    }
+
+    hasThePlayerWin = () => this.thatThing.every((element) => element);
+
+    play = () => {
+        this.thatThing = [];
+        this.coinCounter++;
+        this.thatThing.push(generateRandomBoolean(), generateRandomBoolean(), generateRandomBoolean());
+        if(this.hasThePlayerWin()) {
+            console.log(`Na ompare, que has ganao ${this.coinCounter} monedos`);  
+            this.coinCounter = 0;
+            return;
+        }
+        console.log('Pa tu casa platita.');
+    }
+}
+
+const s1 = new SlotMachine();
+s1.play();
+s1.play();
+s1.play();
+s1.play();
+s1.play();
+s1.play();
+s1.play();
+s1.play();
+s1.play();
