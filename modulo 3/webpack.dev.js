@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const basePath = __dirname;
 
@@ -45,6 +46,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "[name].css",
         }),
-		
+        new BundleAnalyzerPlugin(),
     ],
 };

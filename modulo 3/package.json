@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "build": "webpack",
-        "start": "webpack serve"
+        "start": "webpack serve",
+        "start:analyze": "webpack serve --config webpack.dev.js"
     },
     "author": "alejandro garau madrigal",
     "license": "ISC",
@@ -33,7 +34,8 @@
         "sass-loader": "^12.0.0",
         "webpack": "^5.38.1",
         "webpack-cli": "^4.7.0",
-        "webpack-dev-server": "^4.1.0"
+        "webpack-dev-server": "^4.1.0",
+        "webpack-bundle-analyzer": "^4.5.0"
     },
     "dependencies": {
         "react": "^16.13.1",
