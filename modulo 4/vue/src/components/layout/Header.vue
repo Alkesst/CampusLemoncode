@@ -4,7 +4,7 @@
       <v-app-bar color="#BC544B" class="white--text">
         <v-toolbar-title to="/">
           <router-link class="" to="/">
-            Member-Finder-2000
+            Github Integration API test
           </router-link>
         </v-toolbar-title>
       </v-app-bar>
