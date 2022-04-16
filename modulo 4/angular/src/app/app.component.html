@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="menu">
+  <span>Angular App</span>
+
+  <div class="w-100">
+    <div class="menu__page-list">
+      <app-header-public></app-header-public>
+      <app-header-private class="w-100"></app-header-private>
+    </div>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidebar-container">
+  <mat-sidenav [opened]="sidebarOpened" position="end">
+    sidenav content
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="app-content">
+      <div class="app-router">
+        <router-outlet></router-outlet>
+      </div>
+      <app-footer></app-footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
